@@ -15,7 +15,7 @@
       document.getElementById("username").textContent = profile.name;
       document.getElementById("uuid").textContent = profile.id;
       document.getElementById("avatar").src = `https://crafatar.com/avatars/${profile.id}?size=128&overlay`;
-      document.getElementById("body").src = `https://crafatar.com/renders/body/${profile.id}?scale=7&overlay`;
+      document.getElementById("body").src = `https://mineskin.eu/armor/body/${username}/100.png`;
 
       const namesRes = await fetch(`https://api.mojang.com/user/profiles/${profile.id}/names`);
       if (!namesRes.ok) return;
@@ -50,13 +50,13 @@
   <main class="container mx-auto px-4 py-8">
     <div class="bg-gray-800 rounded-xl shadow p-6">
       <div class="flex flex-col md:flex-row gap-6 items-center">
-        <img id="avatar" src="" alt="Yastube Skin" class="rounded shadow-lg w-32 h-32" />
+        <img id="avatar" src="" alt="Skin" class="rounded shadow-lg w-32 h-32" />
         <div>
           <h2 class="text-2xl font-semibold mb-2">Username: <span id="username" class="text-green-400"></span></h2>
           <p><strong>UUID:</strong> <span id="uuid" class="text-blue-400"></span></p>
           <p><strong>Account Type:</strong> Mojang</p>
           <p><strong>Current Skin:</strong></p>
-          <img id="body" src="" alt="Yastube Body" class="mt-2 rounded-lg shadow-lg" />
+          <img id="body" src="" alt="Body" class="mt-2 rounded-lg shadow-lg" />
         </div>
       </div>
     </div>
