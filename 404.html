@@ -37,7 +37,9 @@
       document.getElementById("latestChange").textContent = date;
     }
 
-    window.onload = fetchUserInfo;
+    document.addEventListener("DOMContentLoaded", async (event) => {
+      await fetchUserInfo()
+    });
   </script>
 </head>
 <body class="bg-gray-900 text-white min-h-screen font-sans">
