@@ -12,9 +12,9 @@
       if (!profileRes.ok) return alert("Failed to fetch profile.");
       const profile = await profileRes.json();
       
-      document.getElementById("username").textContent = profile.name;
+      document.getElementById("username").textContent = username;
       document.getElementById("uuid").textContent = profile.id;
-      document.getElementById("avatar").src = `https://crafatar.com/avatars/${profile.id}?size=128&overlay`;
+      document.getElementById("avatar").src = `https://mineskin.eu/headhelm/${username}/100.png`;
       document.getElementById("body").src = `https://mineskin.eu/armor/body/${username}/100.png`;
 
       const namesRes = await fetch(`https://api.mojang.com/user/profiles/${profile.id}/names`);
